@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+section::before {
+  color: blue;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204deg, 43%, 93%);
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  box-sizing: border-box;
+  display: grid;
+  width: 55%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  top: 90px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "top top" "left right";
+  box-shadow: 7px 11px 39px -12px rgba(62, 66, 68, 0.59);
+}
+main section.top {
+  grid-area: top;
+  background-color: white;
+  padding: 2rem;
+}
+main section.top h4 {
+  color: hsl(179deg, 62%, 43%);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+main section.top h5 {
+  color: hsl(71deg, 73%, 54%);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+main section.top p {
+  color: hsl(218deg, 22%, 67%);
+  font-size: 15px;
+  line-height: 25px;
+  max-width: 90%;
+}
+main section.bottom-left {
+  grid-area: left;
+  background-color: hsl(179deg, 62%, 43%);
+  padding: 2rem;
+  color: white;
+}
+main section.bottom-left h5 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+main section.bottom-left div {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 10px;
+  margin-bottom: 0.4rem;
+}
+main section.bottom-left div P {
+  font-size: 12px;
+  word-spacing: 2px;
+  opacity: 0.7;
+}
+main section.bottom-left p {
+  font-size: 15px;
+}
+main section.bottom-left button {
+  width: 100%;
+  min-height: 40px;
+  font-family: "Karla", sans-serif;
+  color: white;
+  background-color: hsl(71deg, 73%, 54%);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 16px 25px 39px -12px rgba(87, 80, 80, 0.59);
+  margin-top: 2rem;
+}
+main section.bottom-left button:hover,
+main section.bottom-left button:focus {
+  background-color: hsl(179deg, 62%, 43%);
+  border: 1px solid white;
+  transition: 0.3s;
+}
+main section.bottom-right {
+  grid-area: right;
+  background-color: hsl(179deg, 49%, 51%);
+  color: white;
+  padding: 1.5rem;
+}
+main section.bottom-right h5 {
+  font-size: 15px;
+  margin-bottom: 0.8rem;
+}
+main section.bottom-right ul li {
+  list-style: none;
+  line-height: 1.6em;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+@media (max-width: 760px) {
+  main {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 0.6fr);
+    grid-template-areas: "top top-right" "top bottom-right";
+  }
+  main section.top {
+    grid-area: top;
+  }
+  main section.top h4 {
+    font-size: 22px;
+    margin-bottom: 2rem;
+  }
+  main section.top h5 {
+    font-size: 19px;
+  }
+  main section.top p {
+    font-size: 17px;
+  }
+  main section.bottom-left {
+    grid-area: top-right;
+    padding: 1.5rem;
+  }
+  main section.bottom-left h5 {
+    font-size: 19px;
+  }
+  main section.bottom-left button {
+    margin-top: 1.2rem;
+  }
+  main section.bottom-right {
+    grid-area: bottom-right;
+  }
+  main section.bottom-right h5 {
+    font-size: 19px;
+  }
+  main section.bottom-right li {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 525px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+  main section.top {
+    padding: 1.5rem;
+  }
+  main section.top h4 {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+  }
+  main section.top h5 {
+    font-size: 16px !important;
+  }
+  main section.top p {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=single-price.css.map */
